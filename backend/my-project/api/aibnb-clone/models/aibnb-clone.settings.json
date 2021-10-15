@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aibnb_clones",
+  "info": {
+    "name": "Aibnb-clone",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Amount": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "destination_categories": {
+      "via": "aibnb_clones",
+      "collection": "destination-categories"
+    }
+  }
+}

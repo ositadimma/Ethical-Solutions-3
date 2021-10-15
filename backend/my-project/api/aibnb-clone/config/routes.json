@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/aibnb-clones",
+      "handler": "aibnb-clone.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aibnb-clones/count",
+      "handler": "aibnb-clone.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aibnb-clones/:id",
+      "handler": "aibnb-clone.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/aibnb-clones",
+      "handler": "aibnb-clone.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/aibnb-clones/:id",
+      "handler": "aibnb-clone.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/aibnb-clones/:id",
+      "handler": "aibnb-clone.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

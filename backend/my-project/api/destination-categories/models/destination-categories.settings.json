@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destination_categories",
+  "info": {
+    "name": "Destination categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "aibnb_clones": {
+      "via": "destination_categories",
+      "collection": "aibnb-clone",
+      "dominant": true
+    }
+  }
+}
