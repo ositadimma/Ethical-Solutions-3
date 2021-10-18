@@ -9,9 +9,12 @@ import Destination from './Destination';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+
 axios.get('http://localhost:1337/restaurants').then(response => {
   console.log(response);
 });
+
+
 
 function App() {
   return (

@@ -4,19 +4,13 @@ import axios from "axios";
 
 
 
+
+
 function Strapi() {
   const [restaurants, setRestaurant] = useState('');
-  const [filter, setFilter] = useState('');
-  const searchText = (event) =>{
-    setFilter(event.target.value);
-
-  }
-  let dataSearch = restaurants.filter( x =>{
-    return Object.keys(x).some(key =>
-        x[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-    )
-
-  });
+  
+  
+  
   
 
   useEffect(() => {
@@ -36,16 +30,20 @@ function Strapi() {
 
   return (
     <div className="App">
-      <input type="text" placeholder="search" value={filter}  onChange={searchText.bind(this)}/>
-      {dataSearch && dataSearch.map( x => {
-        const { id, name, description} = x;
+      
+      {restaurants && restaurants.map( x => {
+        
+        const endpoint= `http://localhost:1337`
+        const link = x.img.formats.thumbnail.url
         return(
-          <div className="card" key={id}>
+          <div className="card" key={x.id}>
             
-
-          <h3>{name}</h3>
-          <h5>{id}</h5>
-          <p>{description}</p>
+          
+          <h3>{x.name}</h3>
+          <h5>{x.id}</h5>
+          <p>{x.description}</p>
+          <img src={{endpoint}+{link}}/>
+          
           </div>
 
 

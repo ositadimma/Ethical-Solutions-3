@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react"
 import './Card.css'
 import Card from './Card'
+import axios from 'axios';
 
 
 
@@ -39,6 +40,51 @@ export default function Destination() {
     }
   }
 
+  useEffect(() => {
+    axios
+      .post('http://localhost:1337/auth/local',{
+        identifier: 'alaobukky2@gmail.com',
+        password: 'buky@123',
+  
+      })
+      
+      .then((response) => {
+        console.log('User profile', response.data.user);
+        console.log('User token', response.data.jwt);
+        
+      })
+      .catch((error) => {
+        console.log('An error occured:', error.response);
+      });
+
+
+
+     
+  }, []);
+
+
+
+useEffect(() => {
+  const { data } = axios.get('http://localhost:1337/aibnb-clones',
+  {
+    headers:{
+      Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0NTU1NjgxLCJleHAiOjE2MzcxNDc2ODF9.y3V301iwfCj19D6feykshTuoWSonK61xzSaEYaKxvjg',
+    },
+  });
+
+  console.log(data);
+    
+      
+      
+
+
+
+     
+  }, []);
+  
+
+  
+
   return (
     <div className="flex flex-col justify-center p-5 md:max-w-2xl md:mx-auto lg:max-w-5xl">
       
@@ -47,15 +93,15 @@ export default function Destination() {
         name="text"
         id="text"
         placeholder="Search..."
-        autoComplete="off"
+        autoComplete="on"
         className="shadow w-full py-2 px-6 rounded"
         onChange={(e) => searchDestination(e.target.value)}
       />
 
 
-<section className="bg-white shadow rounded mt-10 grid grid-cols-1 p-5 text-gray-900 gap-7 sm:grid-cols-2 lg:grid-cols-2">
+<section className="bg-white  mt-10 grid grid-cols-1 p-5  gap-7 sm:grid-cols-2 lg:grid-cols-2">
         {searchInput.length > 1
-          ? filtered && filtered.map(({ id,  Name, Description, Amount, url, Media, formats, thumbnail, small}) => (
+          ? filtered && filtered.map(({ id,  Name, Description,Media}) => (
               <div className='home__section' key={id}>
               <Card
                 src={`http://localhost:1337/uploads/bubblesite_48c29ad640.png`}
