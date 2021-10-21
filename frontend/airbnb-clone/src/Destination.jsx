@@ -104,7 +104,7 @@ useEffect(() => {
           ? filtered && filtered.map(({ id,  Name, Description,Media}) => (
               <div className='home__section' key={id}>
               <Card
-                src={`http://localhost:1337/uploads/bubblesite_48c29ad640.png`}
+                src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
                 title={Name}
                 description={Description}
               />
@@ -114,7 +114,7 @@ useEffect(() => {
           : destination && destination.map(({ id, Name,  url, Description, Amount,  Media,  thumbnail, small}) => (
               <div  className='home__section' key={id}>
                <Card
-                src={`http://localhost:1337/uploads/bubblesite_48c29ad640.png`}
+                src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
                 title={Name}
                 description={Description}
                />
