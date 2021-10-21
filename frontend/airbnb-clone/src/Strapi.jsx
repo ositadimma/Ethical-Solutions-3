@@ -3,15 +3,8 @@ import axios from "axios";
 
 
 
-
-
-
 function Strapi() {
   const [restaurants, setRestaurant] = useState('');
-  
-  
-  
-  
 
   useEffect(() => {
     axios
@@ -32,18 +25,11 @@ function Strapi() {
     <div className="App">
       
       {restaurants && restaurants.map( x => {
-        
-        const endpoint= `http://localhost:1337`
-        const link = x.img.formats.thumbnail.url
         return(
           <div className="card" key={x.id}>
-            
-          
-          <h3>{x.name}</h3>
-          <h5>{x.id}</h5>
-          <p>{x.description}</p>
-          <img src={{endpoint}+{link}}/>
-          
+            <h3>{x.name}</h3>
+            <h5>{x.id}</h5>
+            <p>{x.description}</p>
           </div>
 
 

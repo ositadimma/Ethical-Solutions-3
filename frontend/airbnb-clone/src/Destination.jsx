@@ -56,9 +56,6 @@ export default function Destination() {
       .catch((error) => {
         console.log('An error occured:', error.response);
       });
-
-
-
      
   }, []);
 
@@ -72,14 +69,7 @@ useEffect(() => {
     },
   });
 
-  console.log(data);
-    
-      
-      
-
-
-
-     
+  console.log(data)   
   }, []);
   
 
@@ -94,7 +84,7 @@ useEffect(() => {
         id="text"
         placeholder="Search..."
         autoComplete="on"
-        className="shadow w-full py-2 px-6 rounded"
+        className="shadow w-full py-2 px-6 rounded"  
         onChange={(e) => searchDestination(e.target.value)}
       />
 
@@ -104,7 +94,7 @@ useEffect(() => {
           ? filtered && filtered.map(({ id,  Name, Description,Media}) => (
               <div className='home__section' key={id}>
               <Card
-                src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
+                 src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
                 title={Name}
                 description={Description}
               />
