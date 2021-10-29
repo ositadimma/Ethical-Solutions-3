@@ -38,6 +38,18 @@
     "destination_categories": {
       "via": "aibnb_clones",
       "collection": "destination-categories"
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

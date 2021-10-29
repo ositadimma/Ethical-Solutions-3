@@ -1,0 +1,36 @@
+.App .content .images{
+    display: flex;
+    justify-content: center;
+}
+
+.App .content .images .left img{
+    width: 550px;
+    height: 450px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.App .content .images .right {
+    margin-left: 20px;
+}
+.App .content .images .right  .top{
+    display: flex;
+    
+}
+
+.App .content .images .right  .top img{
+    margin-left: 10px;
+    width: 250px;
+    
+}
+.App .content .images .right  .bottom img{
+    margin-left: 10px;
+    width: 250px;
+    margin-top: 10px;
+    
+}
+
+.App .content .images .right  .bottom{
+    display: flex;
+    
+}

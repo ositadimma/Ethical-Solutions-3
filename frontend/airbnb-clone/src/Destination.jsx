@@ -91,7 +91,7 @@ useEffect(() => {
 
 <section className="bg-white  mt-10 grid grid-cols-1 p-5  gap-7 sm:grid-cols-2 lg:grid-cols-2">
         {searchInput.length > 1
-          ? filtered && filtered.map(({ id,  Name, Description,Media,Amount}) => (
+          ? filtered && filtered.map(({ id,  Name, Description,Media, pictures, Amount}) => (
             <Link to={`/destination/${id}`}>
                   <div  className='home__section' key={id}>
                     <Card
@@ -106,7 +106,7 @@ useEffect(() => {
               
               
             ))
-          : destination && destination.map(({ id, Name, Amount,  url, Description,  Media,  thumbnail, small}) => (
+          : destination && destination.map(({ id, Name, Amount,  url, Description,  Media, pictures,  thumbnail, large, small}) => (
              <Link to={`/destination/${id}`}>
                   <div  className='home__section' key={id}>
                     <Card
