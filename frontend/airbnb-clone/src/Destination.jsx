@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import './Card.css'
 import Card from './Card'
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -92,26 +92,33 @@ useEffect(() => {
 <section className="bg-white  mt-10 grid grid-cols-1 p-5  gap-7 sm:grid-cols-2 lg:grid-cols-2">
         {searchInput.length > 1
           ? filtered && filtered.map(({ id,  Name, Description,Media,Amount}) => (
-              <div className='home__section' key={id}>
-              <Card
-                 src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
-                title={Name}
-                description={Description}
-                price={Amount}
-              />
-              </div>
+            <Link to={`/destination/${id}`}>
+                  <div  className='home__section' key={id}>
+                    <Card
+                      src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
+                      title={Name}
+                      description={Description}
+                      price={Amount}
+                    />
+             
+                  </div>
+             </Link>
+              
               
             ))
           : destination && destination.map(({ id, Name, Amount,  url, Description,  Media,  thumbnail, small}) => (
-              <div  className='home__section' key={id}>
-               <Card
-                src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
-                title={Name}
-                description={Description}
-                price={Amount}
-               />
+             <Link to={`/destination/${id}`}>
+                  <div  className='home__section' key={id}>
+                    <Card
+                      src={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}
+                      title={Name}
+                      description={Description}
+                      price={Amount}
+                    />
              
-              </div>
+                  </div>
+             </Link>
+             
             ))}
       </section>
        

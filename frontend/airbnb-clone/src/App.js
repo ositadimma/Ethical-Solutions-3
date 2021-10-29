@@ -6,6 +6,7 @@ import Footer from './Footer';
 import SearchPage from './SearchPage';
 import Strapi from './Strapi';
 import Destination from './Destination';
+import Destinationdetails from './Destinationdetails';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/strapi">
             <Strapi />
+          </Route>
+          <Route path="/destination/:id">
+            <Destinationdetails />
           </Route>
           <Route path="/destination">
             <Destination />

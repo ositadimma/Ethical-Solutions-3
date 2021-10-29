@@ -40,7 +40,7 @@ function Home() {
             <Card
                 src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
                 title="Penthouse in London"
-                description="Enjoy the amazing sights of London with this stunning penthouse"
+                description="Enjoy this penthouse"
                 
             />
             <Card
