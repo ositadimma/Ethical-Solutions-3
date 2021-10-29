@@ -106,7 +106,7 @@ useEffect(() => {
               
               
             ))
-          : destination && destination.map(({ id, Name, Amount,  url, Description,  Media, pictures,  thumbnail, large, small}) => (
+          : destination && destination.map(({ id, Name, Amount, guest, beds, bath, author, host, url, Description,  Media, pictures,  thumbnail, large, small}) => (
              <Link to={`/destination/${id}`}>
                   <div  className='home__section' key={id}>
                     <Card

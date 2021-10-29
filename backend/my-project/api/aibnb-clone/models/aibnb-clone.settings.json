@@ -50,6 +50,39 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "host": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "guest": {
+      "type": "string"
+    },
+    "beds": {
+      "type": "string"
+    },
+    "baths": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "amenities": {
+      "type": "enumeration",
+      "enum": [
+        "wifi",
+        "pool",
+        "kitchen",
+        "bath"
+      ]
     }
   }
 }

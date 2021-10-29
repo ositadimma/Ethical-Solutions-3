@@ -1,3 +1,25 @@
+.App .content .heading .bottom-section .socials{
+    display: flex;
+    margin-right: 120px;
+}
+
+.App .content .heading .bottom-section .socials .share a{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.App .content .heading .bottom-section .socials .save {
+    margin-left: 16px;
+}
+
+.App .content .heading .bottom-section .socials .save a{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.App .content .heading .bottom-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
 .App .content .images{
     display: flex;
     justify-content: center;
@@ -6,18 +28,39 @@
 .App .content .images .left img{
     width: 550px;
     height: 450px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
-
+.App .content .images .left img:hover{
+    background-color: black;
+    opacity: 0.7;
+}
 .App .content .images .right {
-    margin-left: 20px;
+    margin-left: 5px;
 }
 .App .content .images .right  .top{
     display: flex;
     
 }
+.App .content .images .right .top img:hover{
+    background-color: black;
+    opacity: 0.7;
+}
+.App .content .heading {
+    padding: 10px 10px;
+    
+}
 
+.App .content .heading h1{
+    margin-left: 150px;
+    font-size: 30px;
+    
+}
+.App .content .heading .location a{
+    margin-left: 130px;
+    text-decoration: underline;
+    
+}
 .App .content .images .right  .top img{
     margin-left: 10px;
     width: 250px;
@@ -29,8 +72,80 @@
     margin-top: 10px;
     
 }
+.App .content .images .right .bottom img:hover{
+    background-color: black;
+    opacity: 0.8;
+}
 
 .App .content .images .right  .bottom{
     display: flex;
     
+}
+
+
+.App .content .middle-section{
+    padding: 20px 20px;
+}
+.App .content .middle-section .right img{
+    width: 100px;
+    border-radius: 50%;
+}
+.App .content .middle-section .left .top .features{
+    display: flex;
+    margin-left: 20px;
+}
+
+.App .content .middle-section .left{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+
+}
+
+.App .content .middle-section .upper{
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+
+}
+.App .content .middle-section .upper .heading h1{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.App .content .middle-section .upper .img img{
+    width: 50px;
+    border-radius: 70%;
+    margin-top: 10px;
+
+}
+
+.App .content .middle-section .left{
+    margin-left: 150px;
+
+}
+.App .content .middle-section .left .top h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.App .content .middle-section .left .top .features .guest{
+    display: flex;
+}
+
+.App .content .middle-section .left .top .features .guest li{
+    margin-left: 10px;
+}
+.App .content .middle-section .left .top .features .beds{
+    display: flex;
+}
+
+.App .content .middle-section .left .top .features .beds li{
+    margin-left: 40px;
+}
+.App .content .middle-section .left .top .features .baths{
+    display: flex;
+}
+.App .content .middle-section .left .top .features .baths li{
+    margin-left: 40px;
 }
