@@ -31,6 +31,11 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+.App .content .images .left .base{
+    display: flex;
+    flex-direction: column;
+}
 .App .content .images .left img:hover{
     background-color: black;
     opacity: 0.7;
@@ -85,6 +90,7 @@
 
 .App .content .middle-section{
     padding: 20px 20px;
+    position: relative;
 }
 .App .content .middle-section .right img{
     width: 100px;
@@ -102,6 +108,244 @@
 
 }
 
+.App .content .middle-section .right{
+    float: right;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: 970px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    width: 350px;
+    height: 310px;
+    padding: 50px 30px;
+
+}
+
+.App .content .middle-section .right .amount .tag{
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.App .content .middle-section .right .check-availability{
+    margin-top: 70px;
+    margin-left: 30px;
+
+}
+
+.App .content .middle-section .right .check-availability button{
+    background-image: linear-gradient(to right, turquoise, blue);
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 220px;
+
+}
+
+.App .content .middle-section .right .check-availability button p{
+    color: white;
+    font-weight: 700;
+
+}
+
+.App .content .middle-section .right .guests{
+    border: 2px solid black;
+    width: 280px;
+    border-radius: 8px;
+    position: absolute;
+    top: 139px;
+    padding: 4px 5px;
+    display: flex;
+
+}
+.App .content .middle-section .right .guests .guest-number h6{
+    font-size: 12px;
+    font-weight: 700;
+
+}
+.App .content .middle-section .right .guests .dropdown{
+    margin-left: 190px;
+    margin-top: 10px;
+
+}
+
+.App .content .middle-section .right .guests .dropdown .fa-angle-down{
+    font-size: 25px;
+
+}
+
+
+.App .content .middle-section .right .amount{
+    display: flex;
+
+}
+
+.App .content .middle-section .right .amount .duration{
+    margin-top: 5px;
+
+}
+
+.App .content .middle-section .right .checks{
+    display: flex;
+    margin-top: 5px;
+    width: 300px;
+    position: relative;
+
+}
+
+.App .content .middle-section .right .checks .check-out, .check-in{
+    border: 1px solid gray;
+    padding: 8px 25px;
+    width:  140px;
+
+}
+
+.App .content .middle-section .right .checks .check-out button .add{
+    color: gray;
+
+}
+
+.App .content .middle-section .right .checks .check-in button .add{
+    color: gray;
+
+}
+.App .content .middle-section .right .checks .check-in h6{
+    font-size: 10px;
+    font-weight: 700;
+
+}
+.App .content .middle-section .right .checks .check-out h6{
+    font-size: 10px;
+    font-weight: 700;
+
+}
+
+
+
+.App .content .middle-section .left-bottom{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 20px;
+    flex-direction: column;
+
+}
+
+
+.App .content .middle-section .left-bottom .basics .amenities{
+    display: flex;
+
+}
+
+.App .content .middle-section .left-bottom .basics .amenities .logo{
+    margin-top: 20px;
+
+}
+
+.App .content .middle-section .left-bottom .basics .amenities .logo .fa-home{
+    font-size: 30px;
+
+}
+
+
+
+.App .content .middle-section .left-bottom .basics .amenities .description{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.App .content .middle-section .left-bottom .basics .amenities .description .heading h2{
+    font-size: 19px;
+    font-weight: 700;
+
+}
+
+.App .content .middle-section .left-bottom .basics .amenities .description .details p{
+    color: gray;
+    margin-left: 10px;
+
+}
+
+.App .content .middle-section .left-bottom .basics2{
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.App .content .middle-section .left-bottom .basics2 .description{
+    top: 5px;
+    position: absolute;
+
+}
+
+.App .content .middle-section .left-bottom .basics2 .details p{
+    color: gray;
+    margin-left: 10px;
+
+}
+
+.App .content .middle-section .left-bottom .basics2 .description .heading h2{
+    font-size: 19px;
+    font-weight: 700;
+
+}
+.App .content .middle-section .left-bottom .basics2 .amenities .description{
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.App .content .middle-section .left-bottom .basics2 .amenities .logo .fa-home{
+    font-size: 30px;
+    margin-top: 20px
+
+}
+
+
+.App .content .middle-section .left-bottom .basics3 .amenities .description{
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.App .content .middle-section .left-bottom .basics3 .amenities .logo .fa-home{
+    font-size: 30px;
+    margin-top: 30px
+
+}
+
+.App .content .middle-section .left-bottom .basics3{
+    position: relative;
+    margin-top: 25px;
+
+}
+
+.App .content .middle-section .left-bottom .basics3 .description{
+    top: 8px;
+    position: absolute;
+
+}
+
+.App .content .middle-section .left-bottom .basics3 .details p{
+    color: gray;
+    margin-left: 10px;
+
+}
+
+.App .content .middle-section .left-bottom .basics3 .description .heading h2{
+    font-size: 19px;
+    font-weight: 700;
+
+}
+
+
+
+
 .App .content .middle-section .upper{
     display: flex;
     justify-content: space-between;
@@ -115,6 +359,7 @@
 }
 .App .content .middle-section .upper .img img{
     width: 50px;
+    height: 50px;
     border-radius: 70%;
     margin-top: 10px;
 

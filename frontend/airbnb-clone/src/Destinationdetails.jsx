@@ -91,9 +91,100 @@ export default function Destinationdetails() {
 
                         
                     </div>
-                    <div className="right">
+                    
+                        <div className="left-bottom">
+                            <div className="basics">
+                                    <div className="amenities">
+                                        <div className="logo">
+                                            <i class="fas fa-home"></i>
+
+                                        </div>
+                                        <div className="description">
+                                            <div className="heading">
+                                                <h2>Entire Home</h2>
+                                            </div>
+                                            <div className="details">
+                                                <p>You will have this place all to your self</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                            <div className="basics2">
+                                    <div className="amenities">
+                                        <div className="logo">
+                                            <i class="fas fa-home"></i>
+
+                                        </div>
+                                        <div className="description">
+                                            <div className="heading">
+                                                <h2>Enhanced clean</h2>
+                                            </div>
+                                            <div className="details">
+                                                <p>The host has committed to Ethical-Solution's 5-step enhanced cleaning process</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                            <div className="basics3">
+                                    <div className="amenities">
+                                        <div className="logo">
+                                            <i class="fas fa-home"></i>
+
+                                        </div>
+                                        <div className="description">
+                                            <div className="heading">
+                                                <h2>Pool</h2>
+                                            </div>
+                                            <div className="details">
+                                                <p>Guests usually search for this popular amenity</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+
+
+                        
+
+                    
                     
 
+                   
+                    <div className="right">
+                        <div className="amount">
+                            <p className="tag">${data.Amount}</p>
+                            <p className="duration">/night</p>
+                        </div>
+                        <div className="checks">
+                            <div className="check-in" >
+                                <h6> CHECK IN</h6>
+                                <button><p className="add">Add date</p></button>
+                            </div>
+                            <div className="check-out">
+                            <h6> CHECKOUT</h6>
+                            <button><p className="add">Add date</p></button>
+                            </div>
+                        
+                        </div>
+                        <div className="guests">
+                            <div className="guest-number">
+                                <h6>GUESTS</h6>
+                                <p>1 guest</p>
+                            </div>
+                            <div className="dropdown">
+                                <i class="fas fa-angle-down"></i>
+
+                            </div>
+                        </div>
+
+                        <div className="check-availability">
+                            <button><p>CHECK AVAILABILITY</p></button>
+                        </div>
                     </div>
 
                 </div>
