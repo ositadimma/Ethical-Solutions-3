@@ -132,7 +132,7 @@
 
 .App .content .middle-section .right .check-availability{
     margin-top: 70px;
-    margin-left: 30px;
+    margin-left: 10px;
 
 }
 
@@ -140,7 +140,7 @@
     background-image: linear-gradient(to right, turquoise, blue);
     padding: 10px 10px;
     border-radius: 10px;
-    width: 220px;
+    width: 280px;
 
 }
 
@@ -155,7 +155,7 @@
     width: 280px;
     border-radius: 8px;
     position: absolute;
-    top: 139px;
+    top: 174px;
     padding: 4px 5px;
     display: flex;
 
@@ -192,6 +192,7 @@
     margin-top: 5px;
     width: 300px;
     position: relative;
+    margin-top: 40px;
 
 }
 
