@@ -187,7 +187,23 @@ export default function Destinationdetails() {
                         </div>
                     </div>
 
+                    <div className="destination-details">
+                        <div className="details">
+                            <p>{data.Description}</p>
+
+                        </div>
+                    </div>
+
+                    <div className="offer">
+                        <div className="packages">
+                            <div className="kitchen"></div>
+                        </div>
+                    </div>
+
                 </div>
+                <hr className="line"></hr>
+
+                
               
             
               
