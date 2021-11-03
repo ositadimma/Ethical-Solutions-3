@@ -1,14 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from 'react-router'
 import useFetch from './useFetch'
 import './Destinationdetails.css'
+import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import  format from "date-fns/format";
+import  parse from "date-fns/parse";
+import  startOfWeek from "date-fns/startOfWeek";
+import  getDay from "date-fns/getDay";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
+const locales = {
+    "en-US": require("date-fns/locale/en-US")
+}
 
+const localizer = dateFnsLocalizer({
+    format,
+    parse,
+    startOfWeek,
+    getDay,
+    locales
+  
+})
+
+const events =[
+    {
+      title: "",
+      allday: true,
+      start: new Date(2021,6,0),
+      end: new Date(2021,6,0),
+      
+    }
+  
+  
+  
+]
+  
 
 
 export default function Destinationdetails() {
+
+    const [newEvent, setNewEvent] = useState({ title: "", start: "", end: ""})
+    const [allEvents, setAllEvents] = useState(events)
+
+  function handleAddEvent() {
+    setAllEvents([...allEvents, newEvent])
+  }
+
     const { id} = useParams();
     const { loading, error, data} = useFetch('http://localhost:1337/aibnb-clones/' + id)
     
@@ -283,7 +324,42 @@ export default function Destinationdetails() {
 
                 </div>
                 <hr className="line"></hr>
+
+                <div className="date-picker">
+                    <input type="text"  className="shadow w-full border-2 border-gray-400   focus:ring-2 focus:ring-transparent py-2 px-6 rounded mt-7" placeholder="Add title" style={{ width: "20%", marginRight: "10px"}}
+                    value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title:e.target.value})}
+                    
+                    />
+ 
+                    <div className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" style={{ width: "20%"}}>
+                        <DatePicker  placeholderText="Check-in" 
+                        selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}
+                        />
+
+                    </div>
+                    <div className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" style={{ width: "20%"}}>
+                        <DatePicker className="check-out"  placeholderText="Check-out"
+                        selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
+                        />      
+
+                    </div>
+                   <div className="book-destination">
+                        <button  onClick={handleAddEvent}>Book Destination</button>  
+                   </div>
+                    
+                    
+                </div>
+            
+
+                <div className="calendar">
+                 <Calendar localizer={localizer} events={allEvents} 
+                 startAccessor="start" endAccessor="end" style={{height:300, margin:"50px"}}/>
+        
+
+                </div>
+
                 
+                        
 
                 
               

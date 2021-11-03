@@ -83,6 +83,12 @@
         "kitchen",
         "bath"
       ]
+    },
+    "checkin": {
+      "type": "date"
+    },
+    "checkout": {
+      "type": "date"
     }
   }
 }

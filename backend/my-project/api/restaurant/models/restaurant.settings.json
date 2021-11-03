@@ -47,6 +47,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "checks": {
+      "type": "date"
     }
   }
 }

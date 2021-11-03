@@ -96,6 +96,24 @@
     position: relative;
 }
 
+.App .content .date-picker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App .content .date-picker .book-destination button{
+    background-image: linear-gradient(to right, turquoise, blue);
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 280px;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+    
+}
+
 .App .content .middle-section .offer-button{
     margin-left: 150px;
 }
