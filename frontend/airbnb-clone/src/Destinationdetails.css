@@ -87,16 +87,98 @@
     
 }
 
+.line{
+    margin-top: 30px;
+}
 
 .App .content .middle-section{
     padding: 20px 20px;
     position: relative;
 }
 
+.App .content .middle-section .offer-button{
+    margin-left: 150px;
+}
+
+
+.App .content .middle-section .offer-button button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+.App .content .middle-section .offer-button button p{
+    font-weight: 600;
+    font-size: 16px;
+}
 .App .content .middle-section .destination-details{
     margin-left: 160px;
-    margin-top: 60px;
+    margin-top: 10px;
+    padding: 25px 20px;
 }
+
+.App .content .middle-section .offer{
+    display: flex;
+}
+
+.App .content .middle-section .offer .offer-right{
+    margin-left: 160px;
+    margin-top: 100px;
+}
+
+.App .content .middle-section .offer .offer-right .kitchen{
+    display: flex;
+    margin-top: 15px;
+}
+
+.App .content .middle-section .offer .offer-right .kitchen p{
+    margin-left: 15px;
+}
+
+.App .content .middle-section .offer .offer-right .kitchen .fa-home{
+    margin-top: 5px;
+}
+.App .content .middle-section .offer .packages .kitchen{
+    display: flex;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+
+.App .content .middle-section .offer .packages h1{
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+
+.App .content .middle-section .offer .packages{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+}
+
+.App .content .middle-section .offer .packages .kitchen p{
+    margin-left: 13px;
+    margin-top: 3px;
+
+
+}
+
+.App .content .middle-section .offer .packages .kitchen .fa-home{
+    margin-top: 7px;
+
+
+}
+.line-up{
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+.line{
+    margin-left: 120px;
+}
+
 .App .content .middle-section .right img{
     width: 100px;
     border-radius: 50%;

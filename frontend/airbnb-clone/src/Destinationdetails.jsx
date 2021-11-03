@@ -7,6 +7,7 @@ import './Destinationdetails.css'
 
 
 
+
 export default function Destinationdetails() {
     const { id} = useParams();
     const { loading, error, data} = useFetch('http://localhost:1337/aibnb-clones/' + id)
@@ -91,7 +92,7 @@ export default function Destinationdetails() {
 
                         
                     </div>
-                    
+                    <hr className="line-up"></hr>
                         <div className="left-bottom">
                             <div className="basics">
                                     <div className="amenities">
@@ -186,22 +187,103 @@ export default function Destinationdetails() {
                             <button><p>CHECK AVAILABILITY</p></button>
                         </div>
                     </div>
+                    <hr className="line-up"></hr>
+
+                   
 
                     <div className="destination-details">
+                
                         <div className="details">
                             <p>{data.Description}</p>
 
                         </div>
                     </div>
 
+                    <hr className="line"></hr>
+
                     <div className="offer">
                         <div className="packages">
-                            <div className="kitchen"></div>
+                            <h1>What this place offers</h1>
+                            <div className="kitchen">
+                             <i class="fas fa-home"></i>
+                             <p>Kitchen</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                             <i class="fas fa-home"></i>
+                             <p>Free parking on premises</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                             <i class="fas fa-home"></i>
+                             <p>TV</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                             <i class="fas fa-home"></i>
+                             <p>Air Conditioning</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                             <i class="fas fa-home"></i>
+                             <p>Washer</p>
+
+                            </div>
                         </div>
+                        <div className="offer-right">
+
+                            <div className="kitchen">
+                                <i class="fas fa-home"></i>
+                                <p>Wifi</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                                <i class="fas fa-home"></i>
+                                <p>Pool</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                                <i class="fas fa-home"></i>
+                                <p>Elevator</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                                <i class="fas fa-home"></i>
+                                <p>Dryer</p>
+
+                            </div>
+
+                            <div className="kitchen">
+                                <i class="fas fa-home"></i>
+                                <p>Spa</p>
+
+                            </div>
+                        
+                        </div>
+
+
+
+
+                    </div>-
+
+                    <div className="offer-button">
+                        <button><p>Show all 21 amenities</p></button>
                     </div>
+                
+                    <hr className="line"></hr>
+
+                    
 
                 </div>
                 <hr className="line"></hr>
+                
 
                 
               
