@@ -1,2 +1,36 @@
+.Destination .form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Destination .form{
+    background-image: linear-gradient( blue, white);
+    
+}
+
+.Destination h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    
+}
 
 
+.Destination .form form input{
+    width: 190px;
+}
+
+
+
+.Destination .form form button{
+    width: 190px;
+    background-image: linear-gradient(to right, turquoise, blue);
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+}

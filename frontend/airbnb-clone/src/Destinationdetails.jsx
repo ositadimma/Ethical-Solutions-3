@@ -10,6 +10,7 @@ import  getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from 'react-router-dom';
 
 
 
@@ -344,7 +345,7 @@ export default function Destinationdetails() {
 
                     </div>
                    <div className="book-destination">
-                        <button  onClick={handleAddEvent}>Book Destination</button>  
+                        <button  onClick={handleAddEvent}>Add to Calendar</button>  
                    </div>
                     
                     
@@ -357,6 +358,15 @@ export default function Destinationdetails() {
         
 
                 </div>
+                <Link to={`/strapi`}>
+                    <div className="proceed">
+                        <button>Proceed to book destination</button>
+                    </div>
+
+                </Link>
+                
+
+                
 
                 
                         
