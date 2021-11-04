@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bookings-data",
+      "handler": "bookings-data.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bookings-data/count",
+      "handler": "bookings-data.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bookings-data/:id",
+      "handler": "bookings-data.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bookings-data",
+      "handler": "bookings-data.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bookings-data/:id",
+      "handler": "bookings-data.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bookings-data/:id",
+      "handler": "bookings-data.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

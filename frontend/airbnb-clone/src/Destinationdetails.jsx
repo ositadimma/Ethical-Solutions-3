@@ -331,14 +331,14 @@ export default function Destinationdetails() {
                     
                     />
  
-                    <div className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" style={{ width: "20%"}}>
-                        <DatePicker  placeholderText="Check-in" 
+                    <div  style={{ width: "20%"}}>
+                        <DatePicker  className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"placeholderText="Check-in" 
                         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}
                         />
 
                     </div>
-                    <div className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" style={{ width: "20%"}}>
-                        <DatePicker className="check-out"  placeholderText="Check-out"
+                    <div  style={{ width: "20%"}}>
+                        <DatePicker  className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" placeholderText="Check-out"
                         selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                         />      
 

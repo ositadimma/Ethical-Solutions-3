@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings_data",
+  "info": {
+    "name": "Bookings data"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Checkin": {
+      "type": "date"
+    },
+    "Checkout": {
+      "type": "date"
+    }
+  }
+}
