@@ -23,6 +23,11 @@
     },
     "Guests": {
       "type": "integer"
+    },
+    "booking_data": {
+      "via": "bookings_data",
+      "collection": "aibnb-clone",
+      "dominant": true
     }
   }
 }

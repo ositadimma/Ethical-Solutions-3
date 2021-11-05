@@ -9,6 +9,8 @@
   height: 380px;
 }
 
+
+
 .card:hover {
   transform: scale(1.07);
 }
@@ -38,4 +40,13 @@
     font-weight: 300;
     margin-top: 8px;
     margin-bottom: 8px;
+  }
+
+
+  @media screen and (max-width: 700px){
+    .card{
+      width: 280px;
+      height: 280px;
+      
+    }
   }

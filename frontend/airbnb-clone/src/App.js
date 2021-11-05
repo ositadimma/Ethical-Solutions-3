@@ -7,6 +7,8 @@ import SearchPage from './SearchPage';
 import Strapi from './Strapi';
 import Destination from './Destination';
 import Destinationdetails from './Destinationdetails';
+
+
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -32,6 +34,7 @@ function App() {
           <Route path="/strapi">
             <Strapi />
           </Route>
+          
           <Route path="/destination/:id">
             <Destinationdetails />
           </Route>
