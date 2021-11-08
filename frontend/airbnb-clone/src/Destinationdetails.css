@@ -527,3 +527,52 @@ hr{
 .App .content .middle-section .left .top .features .baths li{
     margin-left: 40px;
 }
+
+
+@media screen and (max-width: 700px){
+    
+
+    .App .content .images{
+      display: none;
+    }
+
+    .App .content .heading .bottom-section .socials{
+        display: none;
+    }
+
+    .App .content .heading .bottom-section .location a{
+        margin-left: 100px;
+    }
+
+    .App .content .heading h1{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+
+    .App .content .mobile-carousel{
+        margin-top: 20px;
+    }
+
+    .App .content .middle-section .right{
+        display: none;
+    }
+
+    
+
+    
+
+    
+}
+
+
+  @media screen and (min-width: 768px){
+    .App .content .mobile-carousel{
+        display: none;
+    }
+    
+    
+
+    
+
+    
+}

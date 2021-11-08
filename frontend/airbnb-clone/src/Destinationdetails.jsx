@@ -11,6 +11,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from 'react-router-dom';
+import Carousel, { CarouselItem } from "./Carousel";
 
 
 
@@ -65,7 +66,7 @@ export default function Destinationdetails() {
                <div className="heading">
                     <h1 className="font-bold text-2xl">{ data.Name}</h1>
                     <div className="bottom-section">
-                        <div className="location"><a href="https://black-history-month-api.herokuapp.com/people">Lagos, Nigeria</a></div>
+                        <div className="location"><a href="https://black-history-month-api.herokuapp.com/people">{ data.Location}</a></div>
                         <div className="socials">
                             <div className="share">
                                 <i class="fas fa-share"></i>
@@ -96,6 +97,17 @@ export default function Destinationdetails() {
 
                        </div>
                    </div>
+               </div>
+
+               <div className="mobile-carousel">
+               <Carousel>
+                        <CarouselItem> <img src={`${`http://localhost:1337`}${data.Media.formats.thumbnail.url}`} alt="destination-pics"/> </CarouselItem>
+                        <CarouselItem><img src={`${`http://localhost:1337`}${data.pictures[0].formats.thumbnail.url}`} alt="destination-pics"/></CarouselItem>
+                        <CarouselItem><img src={`${`http://localhost:1337`}${data.pictures[1].formats.thumbnail.url}`} alt="destination-pics"/></CarouselItem>
+                        <CarouselItem><img src={`${`http://localhost:1337`}${data.pictures[2].formats.thumbnail.url}`} alt="destination-pics"/></CarouselItem>
+                        <CarouselItem><img src={`${`http://localhost:1337`}${data.pictures[3].formats.thumbnail.url}`} alt="destination-pics"/></CarouselItem>
+                </Carousel>
+                            
                </div>
               
              
