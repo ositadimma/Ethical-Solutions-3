@@ -1,17 +1,25 @@
 import React from 'react';
 import { useState, useEffect } from "react"
-import './Card.css'
+import './SearchPage.css';
+import './SearchResult.css';
+import { Button } from "@material-ui/core";
+import SearchResult from "./SearchResult";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import SearchResult from "./SearchResult";
-import './destination.css'
-
 
 
 const endpoint = `http://localhost:1337/aibnb-clones`
 
-export default function Destination() {
-  const [destination, setDestination] = useState([])
+
+ 
+
+
+
+
+
+
+function SearchPage() {
+    const [destination, setDestination] = useState([])
   const [filtered, setFiltered] = useState([])
   const [searchInput, setSearchInput] = useState("")
 
@@ -72,28 +80,33 @@ useEffect(() => {
 
   console.log(data)   
   }, []);
+
+
   
 
   
+    return (
+        <div className='searchPage'>
+                    <input
+                    type="text"
+                    name="text"
+                    id="text"
+                    placeholder="Search..."
+                    autoComplete="on"
+                    className="shadow mt-10 ml-7 md:mt-2 md:w-full py-2 px-6 rounded"  
+                    onChange={(e) => searchDestination(e.target.value)}
+                />
+            <div className='searchPage__info'>
+                <p>62 stays · 26 august to 30 august · 2 guest</p>
+                <h1>Stays nearby</h1>
+                <Button variant="outlined">Cancellation Flexibility</Button>
+                <Button variant="outlined">Type of place</Button>
+                <Button variant="outlined">Price</Button>
+                <Button variant="outlined">Rooms and beds</Button>
+                <Button variant="outlined">More filters</Button>
+            </div>
 
-  return (
-    <div className="md:flex flex-col justify-center p-5 md:max-w-2xl md:mx-auto lg:max-w-5xl">
-      
-      <input
-        type="text"
-        name="text"
-        id="text"
-        placeholder="Search..."
-        autoComplete="on"
-        className="shadow w-full py-2 px-6 rounded"  
-        onChange={(e) => searchDestination(e.target.value)}
-      />
-
-
-
-
-
-      <section className="large-search">
+        
         {searchInput.length > 1
           ? filtered && filtered.map(({ id,  Name, Description, Location, Media, medium, pictures, Amount}) => (
             <Link to={`/destination/${id}`}>
@@ -126,14 +139,19 @@ useEffect(() => {
              </Link>
              
             ))}
-      </section>
-
       
 
-          
-       
-      
+            
 
-    </div>
-  )
+
+            
+
+            
+            
+            
+            
+        </div>
+    )
 }
+
+export default SearchPage

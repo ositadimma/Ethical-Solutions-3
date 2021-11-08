@@ -73,5 +73,50 @@
 }
 
 
+@media screen and (max-width: 700px){
+    .searchResult > img {
+        height: 100px;
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+    .searchResult__star {
+        display:none;
+    }
+
+    .searchResult__infoBottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .searchResult__heart {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .searchResult__star {
+        color: blue;
+    }
+
+    .searchResults__price {
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+    
+    
+    
+    
+
+
+
+
+    
+  }
+
+
 
   
