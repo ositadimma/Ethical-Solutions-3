@@ -536,6 +536,58 @@ hr{
       display: none;
     }
 
+    .App .content .middle-section .offer .packages .heading{
+        margin-left: 5px;
+        width: 200px;
+
+
+    
+    }
+
+    .App .content .middle-section .offer .packages .heading h1{
+        font-weight: 700;
+        font-size: 14px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .App .content .middle-section .offer .packages .kitchen{
+        display: flex;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    .App .content .middle-section .offer .packages .kitchen p{
+        font-size: 10px;
+    }
+
+    .App .content .middle-section .offer .offer-right .kitchen{
+        margin-top: 20px;
+    }
+
+    .App .content .middle-section .offer .offer-right{
+        margin-left: 10px;
+        margin-top: 90px;
+    }
+
+    .App .content .middle-section .offer .offer-right .kitchen p{
+        font-size: 10px;
+    }
+
+    .App .content .middle-section  .offer-button{
+        margin-left: 20px;
+    }
+
+    .App .content .middle-section  .offer-button button p{
+        font-size: 10px;
+    }
+
+
+   
+
+    
+
+
+
     .App .content .heading .bottom-section .socials{
         display: none;
     }
@@ -556,6 +608,156 @@ hr{
     .App .content .middle-section .right{
         display: none;
     }
+
+    .App .content .middle-section .destination-details{
+        margin-left: 75px;
+    }
+
+    .App .content .middle-section .date-picker{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .App .content .middle-section .destination-details .details p{
+        font-size: 10px;
+    }
+
+    .line{
+        margin-left: 75px;
+    }
+
+    .App .content .middle-section .upper{
+        display: flex;
+        justify-content: space-around;
+        width: 270px;
+    
+    }
+    .App .content .middle-section .upper .heading h1{
+        font-size: 10px;
+        font-weight: 700;
+    
+    }
+
+    
+
+    .App .content .middle-section .upper .img img{
+        width: 30px;
+        height: 30px;
+    
+    }
+
+    .App .content .middle-section .left .top .features .guest li{
+        margin-left: 2px;
+    
+    }
+
+    .App .content .middle-section .left .top .features .beds li{
+        margin-left: 30px;
+    
+    }
+
+    .App .content .middle-section .left .top .features .baths li{
+        margin-left: 30px;
+    
+    }
+
+    .App .content .middle-section .left{
+        margin-left: 25px;
+    
+    }
+
+    .App .content .middle-section .left-bottom{
+        margin-left: 25px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics3{
+        margin-top: 65px;
+    
+    }
+
+    
+
+    .App .content .middle-section .left-bottom .basics3 .amenities .description .heading h2{
+        font-size: 15px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics3 .amenities .description .details p{
+        font-size: 10px;
+    
+    }
+
+    two
+
+
+    .App .content .middle-section .left-bottom .basics2 .amenities .logo .fa-home{
+        font-size: 20px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics2{
+        margin-top: 45px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics2 .amenities .description .heading h2{
+        font-size: 15px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics2 .amenities .description .details p{
+        font-size: 10px;
+    
+    }
+    
+    three
+    .App .content .middle-section .left-bottom .basics .amenities .logo .fa-home{
+        font-size: 20px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics .amenities .description .heading h2{
+        font-size: 15px;
+    
+    }
+
+    .App .content .middle-section .left-bottom .basics .amenities .description .details p{
+        font-size: 10px;
+    
+    }
+
+
+
+    .line-up{
+        margin-left: 75px;
+    
+    }
+
+    .App .content .date-picker{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .App .content .date-picker input{
+        width: 130px;
+    }
+
+    
+
+    .App .content .date-picker .book-destination button{
+        width: 170px;
+    }
+
+
+    .App .content  .proceed button{
+        width: 290px;
+    }
+
+
+    
 
     
 

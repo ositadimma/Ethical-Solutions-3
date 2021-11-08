@@ -257,7 +257,11 @@ export default function Destinationdetails() {
 
                     <div className="offer">
                         <div className="packages">
-                            <h1>What this place offers</h1>
+                            <div className="heading">
+                                <h1>What this place offers</h1>
+
+                            </div>
+                            
                             <div className="kitchen">
                              <i class="fas fa-home"></i>
                              <p>Kitchen</p>
@@ -339,19 +343,20 @@ export default function Destinationdetails() {
                 <hr className="line"></hr>
 
                 <div className="date-picker">
-                    <input type="text"  className="shadow w-full border-2 border-gray-400   focus:ring-2 focus:ring-transparent py-2 px-6 rounded mt-7" placeholder="Add title" style={{ width: "20%", marginRight: "10px"}}
+                    
+                    <input type="text"  className="shadow w-1/2  border-2 border-gray-400  py-2 px-6 rounded mt-7" placeholder="Add title" style={{ width: "35%", marginRight: "10px", marginLeft: "15px"}}
                     value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title:e.target.value})}
                     
                     />
  
-                    <div  style={{ width: "20%"}}>
-                        <DatePicker  className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"placeholderText="Check-in" 
+                    <div  className="in"style={{ width: "20%", marginRight: "40px"}}>
+                        <DatePicker  className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 "placeholderText="Check-in" 
                         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}
                         />
 
                     </div>
-                    <div  style={{ width: "20%"}}>
-                        <DatePicker  className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5" placeholderText="Check-out"
+                    <div  style={{ width: "20%", marginRight: "40px"}}>
+                        <DatePicker  className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7" placeholderText="Check-out"
                         selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                         />      
 
