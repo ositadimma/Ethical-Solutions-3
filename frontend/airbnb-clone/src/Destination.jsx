@@ -111,7 +111,7 @@ useEffect(() => {
               
               
             ))
-          : destination && destination.map(({ id, Name, Amount, location, medium, guest, beds, bath, author, host, url, Description,  Media, pictures,  thumbnail, large, small}) => (
+          : destination && destination.map(({ id, Name, Amount, places, name, location, medium, guest, beds, bath, author, host, url, Description,  Media, pictures,  thumbnail, large, small}) => (
              <Link to={`/destination/${id}`}>
                   <div  key={id}>
                     <SearchResult

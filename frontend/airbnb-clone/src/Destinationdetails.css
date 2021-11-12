@@ -527,7 +527,41 @@ hr{
 .App .content .middle-section .left .top .features .baths li{
     margin-left: 40px;
 }
+.App .content  .related-data{
+    display: flex;
+    margin-left: 10px;
+}
+.App .content .review form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
 
+.App .content .review form input{
+    border: 2px solid gray;
+    width: 350px;
+    margin-top: 20px;
+}
+.App .content .review form textarea{
+    border: 2px solid gray;
+    margin-top: 30px;
+    width: 350px;
+}
+
+.App .content .review{
+    margin-top: 50px;
+}
+.App .content .review h1{
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 90px;
+}
+.App .content  .related-data h3{
+    margin-left: 10px;
+}
+.App .content  .related-data{
+    display: flex;
+}
 
 @media screen and (max-width: 700px){
     
@@ -755,6 +789,8 @@ hr{
     .App .content  .proceed button{
         width: 290px;
     }
+
+    
 
 
     

@@ -3,7 +3,7 @@ import "./Strapi.css";
 import Axios from 'axios';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { Link } from 'react-router-dom';
+
 
 
 toast.configure()
