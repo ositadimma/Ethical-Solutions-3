@@ -91,9 +91,9 @@ useEffect(() => {
                     type="text"
                     name="text"
                     id="text"
-                    placeholder="Search..."
+                    placeholder="Search destinations"
                     autoComplete="on"
-                    className="shadow mt-10 ml-7 md:mt-2 md:w-full py-2 px-6 rounded"  
+                    className="shadow mt-10 ml-12 md:mt-2 md:w-11/12 py-2 px-6 rounded"  
                     onChange={(e) => searchDestination(e.target.value)}
                 />
             <div className='searchPage__info'>

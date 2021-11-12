@@ -43,15 +43,17 @@ function Strapi() {
       <h1>Book Destination</h1>
       <div className="form">
         <form onSubmit={(e)=> submit(e)}>
-          <input  onChange={(e)=>handle(e)} id="Title" value={data.Title} type="text" placeholder="title" 
+          <input  onChange={(e)=>handle(e)} id="Title" value={data.Title} type="text" placeholder="Destination Name" 
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
           <input  onChange={(e)=>handle(e)} id="Checkin" value={data.Checkin} type="date" placeholder="check-in date" 
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
           <input onChange={(e)=>handle(e)} id="Checkout" value={data.Checkout} type="date" placeholder="check-out date"  
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
-          <input onChange={(e)=>handle(e)} id="Guests" value={data.Guests} type="number" placeholder="no of guests"  
+          <input onChange={(e)=>handle(e)} id="Guests" value={data.Guests} type="number" placeholder="Number of guests"  
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
-          <button>Book Destination</button>
+           <button>Book Destination</button>
+
+          
         </form>
 
       </div>

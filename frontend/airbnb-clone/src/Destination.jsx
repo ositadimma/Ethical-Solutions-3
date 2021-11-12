@@ -96,7 +96,7 @@ useEffect(() => {
       <section className="large-search">
         {searchInput.length > 1
           ? filtered && filtered.map(({ id,  Name, Description, Location, Media, medium, pictures, Amount}) => (
-            <Link to={`/destination/${id}`}>
+            <Link >
                   <div  key={id}>
                     <SearchResult
                       img={`${`http://localhost:1337`}${Media.formats.thumbnail.url}`}

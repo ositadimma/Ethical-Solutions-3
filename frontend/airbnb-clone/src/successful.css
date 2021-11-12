@@ -1,0 +1,10 @@
+button{
+    width: 190px;
+    background-image: linear-gradient(to right, turquoise, blue);
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+}

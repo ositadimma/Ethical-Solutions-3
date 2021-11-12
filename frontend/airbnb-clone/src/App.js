@@ -5,8 +5,12 @@ import Header from './Header';
 import Footer from './Footer';
 import SearchPage from './SearchPage';
 import Strapi from './Strapi';
+import Successful from './Successful';
 import Destination from './Destination';
 import Destinationdetails from './Destinationdetails';
+import Login from './Login';
+import Logout from './Logout';
+import Trial from './Trial';
 
 
 import axios from 'axios';
@@ -31,8 +35,18 @@ function App() {
           <Route path="/search">
             <SearchPage />
           </Route>
+          <Route path="/login">
+            <Login />
+            <Logout />
+          </Route>
           <Route path="/strapi">
             <Strapi />
+          </Route>
+          <Route path="/trial">
+            <Trial/>
+          </Route>
+          <Route path="/success">
+            <Successful />
           </Route>
           
           <Route path="/destination/:id">

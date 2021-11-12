@@ -3,6 +3,8 @@ import './Home.css';
 import Card from './Card'
 import Banner from './Banner'
 import Carousel, { CarouselItem } from "./Carousel";
+import { Link } from 'react-router-dom';
+
 
 
 // ES7 snippets to do 'rfce'
@@ -52,7 +54,13 @@ function Home() {
             </div>
             <div className="mobile-contents">
                 <div className="search-bar">
-                    <i class="fas fa-search"></i>
+                    <Link to={'/search'} >
+                     <i class="fas fa-search"></i>
+
+                    </Link>
+
+
+                    
                     <input type="text"  placeholder="Where are you going"/>
                 </div>
                 <div className="text">
@@ -60,9 +68,14 @@ function Home() {
                     <h4>Perfect.</h4>
                 </div>
                 <div className="button">
-                    <button><p>I'm flexible</p>
+                    <Link to={'/search'}>
+                        <button>
+                            <p>I'm flexible</p>
 
-                    </button>
+                        </button>
+
+                    </Link>
+                    
                 </div>
             </div>
                 

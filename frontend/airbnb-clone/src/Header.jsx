@@ -1,8 +1,5 @@
 import React from 'react'
 import './Header.css'
-import SearchIcon from "@material-ui/icons/Search";
-import LanguageIcon from "@material-ui/icons/Language";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Avatar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -15,16 +12,20 @@ function Header() {
                     <h3>Ethical Solutions</h3>
                 </div> 
             </Link>
+            <div className="search-bar">
+                    <Link to={'/search'} >
+                     <i class="fas fa-search"></i>
+
+                    </Link>
+                    <input type="text"  placeholder="Where are you going"/>
+                </div>
            
-            <div className='header__center'>
-                <input type="text" />
-                <SearchIcon />
-            </div>
+            
 
             <div className='header__right'>
-                <p>Become a host</p>
-                <LanguageIcon />
-                <ExpandMoreIcon />
+                <button>
+                    <a href="http://localhost:1337/connect/auth0">Login</a>
+                </button>
                 <Avatar />
             </div>
         </div>

@@ -35,9 +35,9 @@
       "required": false,
       "pluginOptions": {}
     },
-    "destination_categories": {
-      "via": "aibnb_clones",
-      "collection": "destination-categories"
+    "places": {
+      "collection": "destination-categories",
+      "via": "destination"
     },
     "pictures": {
       "collection": "file",

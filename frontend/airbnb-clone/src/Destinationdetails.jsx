@@ -381,6 +381,10 @@ export default function Destinationdetails() {
                     </div>
 
                 </Link>
+
+                <div className="related"></div>
+
+
                 
 
                 
