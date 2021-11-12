@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import "./Strapi.css";
 import Axios from 'axios';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { Link } from 'react-router-dom';
 
 
-
+toast.configure()
 
 function Strapi() {
+  const notify = () =>{
+    toast('Booking Successful, proceed to home to explore more destinations')
+  }
   const url = "http://localhost:1337/bookings-data"
   const [data, setData] = useState({
     Title:"",
@@ -51,7 +57,7 @@ function Strapi() {
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
           <input onChange={(e)=>handle(e)} id="Guests" value={data.Guests} type="number" placeholder="Number of guests"  
           className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 ml-5"/>
-           <button>Book Destination</button>
+           <button onClick={notify}>Book Destination</button>
 
           
         </form>

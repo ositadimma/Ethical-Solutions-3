@@ -11,8 +11,6 @@ import Destinationdetails from './Destinationdetails';
 import Login from './Login';
 import Logout from './Logout';
 import Trial from './Trial';
-
-
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
