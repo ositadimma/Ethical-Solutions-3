@@ -47,6 +47,7 @@ export default function Destinationdetails() {
 
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: ""})
     const [allEvents, setAllEvents] = useState(events)
+    const [show, setShow] = useState(false)
 
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
@@ -66,7 +67,7 @@ export default function Destinationdetails() {
                <div className="heading">
                     <h1 className="font-bold text-2xl">{ data.Name}</h1>
                     <div className="bottom-section">
-                        <div className="location"><a href="https://black-history-month-api.herokuapp.com/people">{ data.Location}</a></div>
+                        <div className="location"><a href="https://black-history-month-api.hople">{ data.Location}</a></div>
                         <div className="socials">
                             <div className="share">
                                 <i class="fas fa-share"></i>
@@ -292,7 +293,8 @@ export default function Destinationdetails() {
 
                             </div>
                         </div>
-                        <div className="offer-right">
+                        {
+                            show?<div className="offer-right">
 
                             <div className="kitchen">
                                 <i class="fas fa-home"></i>
@@ -323,16 +325,24 @@ export default function Destinationdetails() {
                                 <p>Spa</p>
 
                             </div>
+                            
                         
-                        </div>
-
+                        </div>:null
+                        }
+                        
+                        
+                        
+                        
+                        
 
 
 
                     </div>-
 
                     <div className="offer-button">
-                        <button><p>Show all 21 amenities</p></button>
+                        
+                        <button onClick={()=>setShow(!show)}><p>Show all amenities</p></button>
+                        
                     </div>
                 
                     <hr className="line"></hr>
