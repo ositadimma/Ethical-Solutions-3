@@ -41,33 +41,14 @@ export default function Destination() {
     }
   }
 
-  useEffect(() => {
-    axios
-      .post('http://localhost:1337/auth/local',{
-        identifier: 'alaobukky2@gmail.com',
-        password: 'buky@123',
   
-      })
-      
-      .then((response) => {
-        console.log('User profile', response.data.user);
-        console.log('User token', response.data.jwt);
-        
-      })
-      .catch((error) => {
-        console.log('An error occured:', error.response);
-      });
-     
-  }, []);
 
 
 
 useEffect(() => {
   const { data } = axios.get('http://localhost:1337/aibnb-clones',
   {
-    headers:{
-      Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM0NTU1NjgxLCJleHAiOjE2MzcxNDc2ODF9.y3V301iwfCj19D6feykshTuoWSonK61xzSaEYaKxvjg',
-    },
+    
   });
 
   console.log(data)   
@@ -95,7 +76,7 @@ useEffect(() => {
 
       <section className="large-search">
         {searchInput.length > 1
-          ? filtered && filtered.map(({ id,  Name, Description, Location, Media, medium, pictures, Amount}) => (
+          ? filtered && filtered.map(({ id,  Name, ratings, Description, Location, Media, medium, pictures, Amount}) => (
             <Link >
                   <div  key={id}>
                     <SearchResult
@@ -111,7 +92,7 @@ useEffect(() => {
               
               
             ))
-          : destination && destination.map(({ id, Name, Amount, places, name, location, medium, guest, beds, bath, author, host, url, Description,  Media, pictures,  thumbnail, large, small}) => (
+          : destination && destination.map(({ id, Name, ratings, Amount, places, name, location, medium, guest, beds, bath, author, host, url, Description,  Media, pictures,  thumbnail, large, small}) => (
              <Link to={`/destination/${id}`}>
                   <div  key={id}>
                     <SearchResult

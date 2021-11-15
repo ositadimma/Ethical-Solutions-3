@@ -90,13 +90,12 @@
     "checkout": {
       "type": "date"
     },
-    "bookings_data": {
-      "via": "booking_data",
-      "collection": "bookings-data"
-    },
     "Location": {
       "type": "string",
       "required": true
+    },
+    "ratings": {
+      "type": "decimal"
     }
   }
 }

@@ -394,7 +394,7 @@ export default function Destinationdetails() {
 
                 <div className="related-data">
                     Related destinations:
-                    <Link>
+                    <Link >
                      <h3>{ data.places[0].name}</h3>
                         
                     </Link>
@@ -410,6 +410,7 @@ export default function Destinationdetails() {
                     <form className="flex flex-col">
                         <input type="text" placeholder="name"/>
                         <textarea name="" id="" cols="30" rows="10" placeholder="comment"></textarea>
+                        <button>Post review</button>
                     </form>
 
 

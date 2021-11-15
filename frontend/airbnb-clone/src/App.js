@@ -5,6 +5,8 @@ import Header from './Header';
 import Footer from './Footer';
 import SearchPage from './SearchPage';
 import Strapi from './Strapi';
+import Reviews from './Reviews';
+import Related from './Related';
 import Successful from './Successful';
 import Destination from './Destination';
 import Destinationdetails from './Destinationdetails';
@@ -52,6 +54,12 @@ function App() {
           </Route>
           <Route path="/destination">
             <Destination />
+          </Route>
+          <Route path="/reviews/:id">
+            <Reviews />
+          </Route>
+          <Route path="/related/:id">
+            <Related />
           </Route>
           <Route exact path="/">
             <Home />
