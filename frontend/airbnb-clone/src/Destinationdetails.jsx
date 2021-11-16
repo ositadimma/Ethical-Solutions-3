@@ -251,18 +251,20 @@ export default function Destinationdetails() {
                         <div className="checks">
                             <div className="check-in" >
                                 <h6> CHECK IN</h6>
-                                <button><p className="add">Add date</p></button>
+                                <input type="date"  placeholder="add date"/>
+                               
                             </div>
                             <div className="check-out">
                             <h6> CHECKOUT</h6>
-                            <button><p className="add">Add date</p></button>
+                            <input type="date"  placeholder="add date"/>
                             </div>
                         
                         </div>
                         <div className="guests">
                             <div className="guest-number">
                                 <h6>GUESTS</h6>
-                                <p>1 guest</p>
+                                <input type="number"  placeholder="no of guests"/>
+                                
                             </div>
                             <div className="dropdown">
                                 <i class="fas fa-angle-down"></i>
@@ -361,12 +363,6 @@ export default function Destinationdetails() {
                         
                         </div>:null
                         }
-                        
-                        
-                        
-                        
-                        
-
 
 
                     </div>-

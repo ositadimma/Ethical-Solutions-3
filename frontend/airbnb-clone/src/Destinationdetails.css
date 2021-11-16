@@ -291,10 +291,20 @@ hr{
 
 }
 
+.App .content .middle-section .right .guests .guest-number input{
+    margin-left: 40px;
+
+}
+.App .content .middle-section .right .guests .guest-number input:focus{
+    outline: none;
+
+}
+
 
 .App .content .middle-section .right .guests .guest-number h6{
     font-size: 12px;
     font-weight: 700;
+    margin-left: 35px;
 
 }
 .App .content .middle-section .right .guests .dropdown{
@@ -332,6 +342,18 @@ hr{
     border: 1px solid gray;
     padding: 8px 25px;
     width:  140px;
+
+}
+.App .content .middle-section .right .checks  .check-in input:focus{
+    outline: none;
+
+}
+.App .content .middle-section .right .checks  .check-out input:focus{
+    outline: none;
+
+}
+.App .content .middle-section .right .checks .check-in input{
+    margin-right: 70px;
 
 }
 
@@ -577,6 +599,8 @@ hr{
 }
 .App .content  .related-data{
     display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 700px){
@@ -824,24 +848,25 @@ hr{
 
     .App .content  .proceed button{
         width: 290px;
+    }  
+}
+
+
+  @media  only screen and (min-width: 768px){
+    .App .content .mobile-carousel{
+        display: none;
     }
-
     
-
-
-    
-
-    
-
     
 
     
 }
-
-
-  @media screen and (min-width: 768px){
+@media screen and (min-width: 992px){
     .App .content .mobile-carousel{
         display: none;
+    }
+    .App .content .date-picker{
+        display: flex;
     }
     
     
