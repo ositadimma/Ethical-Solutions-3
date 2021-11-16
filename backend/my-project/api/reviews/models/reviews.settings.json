@@ -18,6 +18,10 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "aibnb_clones": {
+      "via": "reviews",
+      "collection": "aibnb-clone"
     }
   }
 }

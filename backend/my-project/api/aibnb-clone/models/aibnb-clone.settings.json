@@ -96,6 +96,11 @@
     },
     "ratings": {
       "type": "decimal"
+    },
+    "reviews": {
+      "collection": "reviews",
+      "via": "aibnb_clones",
+      "dominant": true
     }
   }
 }

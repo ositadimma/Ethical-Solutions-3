@@ -23,6 +23,21 @@
     width: 190px;
 }
 
+.Destination .form form label{
+    color: white;
+}
+
+.Destination .form form .checkin, .checkout{
+    margin-left: 20px;
+}
+
+.Destination .form form .name{
+    margin-left: 10px;
+}
+
+
+
+
 
 
 .Destination .form form button{
@@ -33,5 +48,5 @@
     border-radius: 10px;
     color: white;
     font-weight: 700;
-    margin-left: 10px;
+    margin-left: 120px;
 }

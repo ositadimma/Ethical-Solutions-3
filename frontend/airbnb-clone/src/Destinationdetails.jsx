@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router'
 import useFetch from './useFetch'
 import './Destinationdetails.css'
@@ -11,6 +11,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 import Carousel, { CarouselItem } from "./Carousel";
 
 
@@ -44,11 +45,42 @@ const events =[
 
 
 export default function Destinationdetails() {
-
+    const url = "http://localhost:1337/reviews" 
+    const [front, setFront] = useState()
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: ""})
     const [allEvents, setAllEvents] = useState(events)
     const [show, setShow] = useState(false)
+    const [review, setReview] = useState({
+        name:"",
+        reviews:""
+    })
+    useEffect(()=>{
+        Axios.get(`http://localhost:1337/reviews`).then((res)=>{
+            const responseFront = res.data;
+            setFront(responseFront);
+        });
+    }, []);
 
+    
+
+    function submit(e){
+        e.preventDefault();
+        Axios.post(url, {
+            name:review.name,
+            reviews:review.reviews
+        })
+        .then(res=>{
+            console.log(res.review)
+        })
+
+    }
+
+    function handle(e){
+        const newdata={...review}
+        newdata[e.target.id]=e.target.value
+        setReview(newdata)
+        console.log(newdata)
+    }
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
   }
@@ -407,16 +439,43 @@ export default function Destinationdetails() {
                 </div>
                 <div className="review">
                     <h1>Post a Review</h1>
-                    <form className="flex flex-col">
-                        <input type="text" placeholder="name"/>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="comment"></textarea>
+                    <form onSubmit={(e) => submit(e)} className="flex flex-col">
+                        <input  onChange={(e) => handle(e)} value={review.name} type="text" id="name" placeholder="name"/>
+                        <textarea onChange={ (e) => handle(e)} value={review.reviews} id="reviews" cols="30" rows="10" placeholder="comment"></textarea>
                         <button>Post review</button>
+                       
                     </form>
+                    <div className="front">
+                    { front && front.map(each =>{
+                        const { name, reviews} = each;
+                        return(
+                            <div>
+                                <div className="feedback">
+                                    <h3>{name}</h3>
+                                    <h3>{reviews}</h3>
+                                
 
+                                </div>
+                                
+                            </div>
+                            
 
-
-
+                        )
+                     })}
                 </div>
+                    <div className="see-reviews"> 
+                        < Link to={`/reviews/${id}`} style={{textDecoration:'underline', color:'blue'}}>
+                            <button>See all reviews</button>
+                        </Link>
+
+                     </div>
+                       
+
+
+                
+                </div>
+
+                
 
 
                 

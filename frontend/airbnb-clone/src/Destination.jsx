@@ -84,7 +84,7 @@ useEffect(() => {
                       title={Name}
                       description={Description}
                       price={Amount}
-                      star={4.73}
+                      star={ratings}
                     />
              
                   </div>
@@ -100,7 +100,7 @@ useEffect(() => {
                       title={Name}
                       description={Description}
                       price={Amount}
-                      star={4.73}
+                      star={ratings}
                     />
              
                   </div>

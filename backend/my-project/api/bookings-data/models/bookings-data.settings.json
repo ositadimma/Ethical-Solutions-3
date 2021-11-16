@@ -23,6 +23,9 @@
     },
     "Guests": {
       "type": "integer"
+    },
+    "Name": {
+      "type": "string"
     }
   }
 }

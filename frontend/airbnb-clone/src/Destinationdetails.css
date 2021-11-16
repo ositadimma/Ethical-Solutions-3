@@ -551,6 +551,22 @@ hr{
 .App .content .review{
     margin-top: 50px;
 }
+.App .content .see-reviews{
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.App .content .review form button{
+    background-image: linear-gradient(to right, turquoise, blue);
+    width: 180px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.App .content .front{
+    display: none;
+}
 .App .content .review h1{
     font-size: 20px;
     font-weight: 800;
@@ -564,8 +580,28 @@ hr{
 }
 
 @media screen and (max-width: 700px){
+    .App .content  .related-data{
+        margin-left: 40px;
+        margin-top: 20px;
+    }
     
-
+    .App .content .review{
+        margin-left: 10px;
+    }
+    .App .content .see-reviews{
+        margin-top: 30px;
+        margin-left: 120px;
+    }
+    .App .content .review form input{
+        border: 2px solid gray;
+        width: 180px;
+    }
+    .App .content .review form textarea{
+        border: 2px solid gray;
+        width: 200px;
+        margin-top: 20px;
+        height: 150px;
+    }
     .App .content .images{
       display: none;
     }
