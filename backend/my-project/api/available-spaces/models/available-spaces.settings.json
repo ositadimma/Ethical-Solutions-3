@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "available_spaces",
+  "info": {
+    "name": "Available-spaces"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Destination": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "time": {
+      "type": "datetime"
+    }
+  }
+}

@@ -22,6 +22,9 @@
 .Destination .form form input{
     width: 190px;
 }
+.Destination .form form input:focus{
+    outline: none;
+}
 
 .Destination .form form label{
     color: white;
