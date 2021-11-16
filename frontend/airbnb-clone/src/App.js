@@ -7,7 +7,7 @@ import SearchPage from './SearchPage';
 import Strapi from './Strapi';
 import Reviews from './Reviews';
 import Related from './Related';
-import Successful from './Successful';
+import Available from './Available';
 import Destination from './Destination';
 import Destinationdetails from './Destinationdetails';
 import Login from './Login';
@@ -42,11 +42,11 @@ function App() {
           <Route path="/strapi">
             <Strapi />
           </Route>
+          <Route path="/available-spaces">
+            <Available />
+          </Route>
           <Route path="/trial">
             <Trial/>
-          </Route>
-          <Route path="/success">
-            <Successful />
           </Route>
           
           <Route path="/destination/:id">

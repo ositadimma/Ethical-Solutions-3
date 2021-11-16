@@ -273,7 +273,11 @@ export default function Destinationdetails() {
                         </div>
 
                         <div className="check-availability">
-                            <button><p>CHECK AVAILABILITY</p></button>
+                            <Link to={'/available-spaces'}>
+                                <button><p>CHECK AVAILABILITY</p></button>
+
+                            </Link>
+                            
                         </div>
                     </div>
                     <hr className="line-up"></hr>
