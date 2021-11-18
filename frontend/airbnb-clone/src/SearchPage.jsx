@@ -15,16 +15,21 @@ function SearchPage() {
     const [destination, setDestination] = useState([])
   const [filtered, setFiltered] = useState([])
   const [searchInput, setSearchInput] = useState("")
+  const [error, setError] = useState(null)
+  const[isLoading, setIsLoading] = useState(true)
 
   const fetchDestination = async () => {
+  
     const res = await fetch(endpoint)
     const data = await res.json()
     setDestination(data)
+    setIsLoading(false)
+    
   }
 
   useEffect(() => {
     fetchDestination()
-  })
+  }, [])
 
   const searchDestination = (searchValue) => {
     setSearchInput(searchValue)
@@ -57,7 +62,8 @@ useEffect(() => {
 
   
     return (
-        <div className='searchPage'>
+      <div className="searchPage">
+        {isLoading ? <h1>Loading...</h1>:<div>
                     <input
                     type="text"
                     name="text"
@@ -113,7 +119,9 @@ useEffect(() => {
             
             
             
-        </div>
+        </div>}
+      </div>
+        
     )
 }
 

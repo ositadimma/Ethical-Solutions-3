@@ -66,7 +66,11 @@ export default function Destinationdetails() {
         Axios.get(`http://localhost:1337/reviews`).then((res)=>{
             const responseFront = res.data;
             setFront(responseFront);
-        });
+        })
+        .catch(err=> {
+            console.log(err)
+
+        })
     }, []);
 
     
@@ -76,11 +80,8 @@ export default function Destinationdetails() {
         Axios.post(url, {
             name:review.name,
             reviews:review.reviews
-        })
-        .then(res=>{
-            console.log(res.review)
-        })
-
+        });
+        
     }
 
     function handle(e){
