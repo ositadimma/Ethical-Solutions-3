@@ -50,6 +50,14 @@ export default function Destinationdetails() {
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: ""})
     const [allEvents, setAllEvents] = useState(events)
     const [show, setShow] = useState(false)
+    const [number1, setNumber1] = useState()
+    const [number2, setNumber2] = useState()
+    const [total, setTotal] = useState(number1 * number2)
+   
+    function addThemTogether(){
+        setTotal(number1 * number2)
+
+    }
     const [review, setReview] = useState({
         name:"",
         reviews:""
@@ -263,7 +271,7 @@ export default function Destinationdetails() {
                         <div className="guests">
                             <div className="guest-number">
                                 <h6>GUESTS</h6>
-                                <input type="number"  placeholder="no of guests"/>
+                                <input type="number"  placeholder="no of guests" value={number1} onChange={e =>setNumber1(+e.target.value)}/>
                                 
                             </div>
                             <div className="dropdown">
@@ -271,18 +279,30 @@ export default function Destinationdetails() {
 
                             </div>
                         </div>
+                        <div className="total">
+                            <input type="number"  placeholder=" destination amount" value={number2} onChange={e =>setNumber2(+e.target.value)}/>
+                            <div className="get-total">
+                            <button onClick={addThemTogether}>Get Total:</button>
+                            <h2>${total}</h2>
+                            </div>
+
+                        </div>
+                        
 
                         <div className="check-availability">
-                            <Link to={'/available-spaces'}>
-                                <button><p>CHECK AVAILABILITY</p></button>
+                            <Link to={'/strapi'}>
+                                <button ><p>BOOK DESTINATION</p></button>
 
                             </Link>
+
+                            
                             
                         </div>
+                        
+                        
                     </div>
                     <hr className="line-up"></hr>
-
-                   
+                    
 
                     <div className="destination-details">
                 
@@ -423,6 +443,9 @@ export default function Destinationdetails() {
                     </div>
 
                 </Link>
+                
+                
+                        
 
                 <div className="related-data">
                     Related destinations:
@@ -443,7 +466,6 @@ export default function Destinationdetails() {
                         <input  onChange={(e) => handle(e)} value={review.name} type="text" id="name" placeholder="name"/>
                         <textarea onChange={ (e) => handle(e)} value={review.reviews} id="reviews" cols="30" rows="10" placeholder="comment"></textarea>
                         <button>Post review</button>
-                       
                     </form>
                     <div className="front">
                     { front && front.map(each =>{

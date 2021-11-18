@@ -1,6 +1,8 @@
-.home__section {
+.home .home__section .cards{
     display: flex;
-    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
   }
 
 
@@ -106,6 +108,11 @@
     .home  .mobile-carousel{
       display: none;
     }
+
+    .home .mobile .mobile-contents .button{
+      display: none;
+    }
+
 
     
   }

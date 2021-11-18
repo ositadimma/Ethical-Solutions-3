@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .App .content .images .left img:hover{
     background-color: black;
     opacity: 0.7;
@@ -242,7 +243,7 @@
     box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     width: 350px;
-    height: 310px;
+    height: 510px;
     padding: 50px 30px;
 
 }
@@ -292,7 +293,7 @@ hr{
 }
 
 .App .content .middle-section .right .guests .guest-number input{
-    margin-left: 40px;
+    margin-left: 30px;
 
 }
 .App .content .middle-section .right .guests .guest-number input:focus{
@@ -321,6 +322,49 @@ hr{
 
 .App .content .middle-section .right .amount{
     display: flex;
+
+}
+.App .content .middle-section .right .total{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 2px solid black;
+    width: 280px;
+    border-radius: 7px;
+    padding: 5px 5px;
+
+}
+
+.App .content .middle-section .right .total .get-total{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 5px;
+    
+
+}
+
+.App .content .middle-section .right .total .get-total h2{
+    margin-left: 90px;
+    
+
+}
+
+.App .content .middle-section .right .total .get-total button{
+    background-image: linear-gradient(to right, turquoise, blue);
+    padding: 2px 2px;
+    border-radius: 10px;
+    width: 90px;
+    color: white;
+    
+    
+
+}
+
+.App .content .middle-section .right .total input{
+    outline: none;
+    width: 200px;
+    margin-left: 30px;
+    
 
 }
 
@@ -377,8 +421,34 @@ hr{
 
 }
 
+.App .content .modal, .modal-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
+    
+}
 
+.App .content .modal-content{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    padding: 20px 20px;
+
+    
+}
+.App .content .modal-overlay{
+    background: rgba(49, 49, 49, 0.8);
+
+    
+}
 .App .content .middle-section .left-bottom{
     display: flex;
     margin-left: 150px;

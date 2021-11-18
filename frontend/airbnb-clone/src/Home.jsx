@@ -1,47 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import Card from './Card'
 import Banner from './Banner'
 import Carousel, { CarouselItem } from "./Carousel";
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 
 
 // ES7 snippets to do 'rfce'
 
+
+
+
 function Home() {
+    const [Homes, setHomes] = useState()
+    useEffect(()=>{
+        Axios.get(`http://localhost:1337/homepages`).then((res)=>{
+            const responseHomes = res.data;
+            setHomes(responseHomes);
+        });
+    }, []);
     
-  const data = [
-    {
-        id: 1,
-        title:"Outdoor getaways", 
-        img: "https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720",
-        desc: "",
-
-    },
-
-    {
-        id: 2,
-        title:"Unique Stays", 
-        img: "https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720",
-        desc: "",
-
-    },
-
-    {
-        id: 3,
-        title:"Beach Resorts", 
-        img: "https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg",
-        desc: "",
-
-    },
-
-    
-
-    
-]
-    
-
   
     return (
         <div className='home'>
@@ -81,14 +61,51 @@ function Home() {
                 
              </div>
                 <div className='home__section'>
-                {data.map((d)=>(
-                    <Card
-                    src={d.img}
-                    title={d.title}
-                    description={d.desc}
-                    
-                    />
-                ))}
+                { Homes && Homes.map(each =>{
+                        const { card1,  card2, card3, title1, title2, title3, formats, thumbnail, medium, url} = each;
+                        return(
+                            <div className="cards">
+                            <Link to={'/search'}>
+                                <Card
+                                src={`${`http://localhost:1337`}${card1.formats.medium.url}`}
+                                title={title1}
+                                description="Unique activities we can do together, led by a world of hosts."
+                                
+                                />
+
+                            </Link>
+
+                            <Link to={'/search'}>
+                                <Card
+                                src={`${`http://localhost:1337`}${card2.formats.medium.url}`}
+                                title={title2}
+                                description="Unique activities we can do together, led by a world of hosts."
+                                
+                                />
+
+                            </Link>
+
+                            <Link to={'/search'}>
+                                <Card
+                                src={`${`http://localhost:1337`}${card3.formats.thumbnail.url}`}
+                                title={title3}
+                                description="Unique activities we can do together, led by a world of hosts."
+                                
+                                />
+
+                            </Link>
+                            
+
+                           
+
+                        
+                            </div>
+
+                            
+                            
+
+                        )
+                     })}
 
                 </div>
 
