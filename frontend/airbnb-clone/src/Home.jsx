@@ -62,14 +62,14 @@ function Home() {
              </div>
                 <div className='home__section'>
                 { Homes && Homes.map(each =>{
-                        const { card1,  card2, card3, title1, title2, title3, formats, thumbnail, medium, url} = each;
+                        const { card1,  card2, card3, title1, title2, title3, desc1, desc2, desc3, formats, thumbnail, medium, url} = each;
                         return(
                             <div className="cards">
                             <Link to={'/search'}>
                                 <Card
                                 src={`${`http://localhost:1337`}${card1.formats.medium.url}`}
                                 title={title1}
-                                description="Unique activities we can do together, led by a world of hosts."
+                                description={desc1}
                                 
                                 />
 
@@ -79,7 +79,7 @@ function Home() {
                                 <Card
                                 src={`${`http://localhost:1337`}${card2.formats.medium.url}`}
                                 title={title2}
-                                description="Unique activities we can do together, led by a world of hosts."
+                                description={desc2}
                                 
                                 />
 
@@ -89,7 +89,7 @@ function Home() {
                                 <Card
                                 src={`${`http://localhost:1337`}${card3.formats.thumbnail.url}`}
                                 title={title3}
-                                description="Unique activities we can do together, led by a world of hosts."
+                                description={desc3}
                                 
                                 />
 
@@ -110,34 +110,75 @@ function Home() {
                 </div>
 
                 <div className="mobile-carousel">
-                    <Carousel>
-                        <CarouselItem>
-                        <Card
-                        src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
-                        title="Online Experiences"
-                        description="Unique activities we can do together, led by a world of hosts."
-                        
-                        />
-                        </CarouselItem>
-                        <CarouselItem>
-                            <Card
-                                src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
-                                title="Unique stays"
-                                description="Spaces that are more than just a place to sleep."
+                    <div className="card-content">
+                    { Homes && Homes.map(each =>{
+                        const { card1,  card2, card3, title1, title2, title3, desc1, desc2, desc3, formats, thumbnail, medium, url} = each;
+                        return(
+                            <div className="cards">
+                                <Carousel>
+                                    <CarouselItem>
+                                    <Link to={'/search'}>
+                                        <Card
+                                        src={`${`http://localhost:1337`}${card1.formats.medium.url}`}
+                                        title={title1}
+                                        description={desc1}
                                 
-                            />
-                        </CarouselItem>
-                        <CarouselItem>
-                            <Card
-                                src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
-                                title="Unique stays"
-                                description="Spaces that are more than just a place to sleep."
-                                
-                            />
+                                     />
 
-                        </CarouselItem>
-                    </Carousel>
+                                 </Link>
+                                        
+                                    </CarouselItem>
+
+                                    <CarouselItem>
+                                    <Link to={'/search'}>
+                                        <Card
+                                        src={`${`http://localhost:1337`}${card2.formats.medium.url}`}
+                                        title={title2}
+                                        description={desc2}
+                                
+                                     />
+
+                                 </Link>
+                                        
+                                    </CarouselItem>
+
+                                    <CarouselItem>
+                                    <Link to={'/search'}>
+                                        <Card
+                                        src={`${`http://localhost:1337`}${card3.formats.thumbnail.url}`}
+                                        title={title3}
+                                        description={desc3}
+                                
+                                     />
+
+                                 </Link>
+                                        
+                                    </CarouselItem>
+                                </Carousel>
                             
+
+                            
+
+                            
+                            
+
+                           
+
+                        
+                            </div>
+
+                            
+                            
+
+                        )
+                     })}
+
+                        
+                        
+                    </div>
+
+
+
                     
                 </div>
 

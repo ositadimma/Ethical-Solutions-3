@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "homepages",
   "info": {
-    "name": "homepage"
+    "name": "homepage",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -66,6 +67,15 @@
       "type": "string"
     },
     "title3": {
+      "type": "string"
+    },
+    "desc1": {
+      "type": "string"
+    },
+    "desc2": {
+      "type": "string"
+    },
+    "desc3": {
       "type": "string"
     }
   }
