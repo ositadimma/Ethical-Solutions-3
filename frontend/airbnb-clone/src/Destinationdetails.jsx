@@ -273,7 +273,7 @@ export default function Destinationdetails() {
                         <div className="total">
                             <input type="number"  placeholder=" Destination amount" value={number2} onChange={e =>setNumber2(+e.target.value)}/>
                             <div className="get-total">
-                            <button onClick={addThemTogether}>Get Total:</button>
+                            <button onClick={addThemTogether}>Get Total</button>
                             <h2>${total}</h2>
                             </div>
 
@@ -397,19 +397,19 @@ export default function Destinationdetails() {
 
                 <div className="date-picker">
                     
-                    <input type="text"  className="shadow w-1/2  border-2 border-gray-400  py-2 px-6 rounded mt-7" placeholder="Add title" style={{ width: "35%", marginRight: "10px", marginLeft: "15px"}}
+                    <input type="text"  className="shadow w-60 md:ml-8 border-2 border-gray-400  py-2 px-6 rounded mt-7" placeholder="Add title" 
                     value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title:e.target.value})}
                     
                     />
  
-                    <div  className="in"style={{ width: "20%", marginRight: "40px"}}>
-                        <DatePicker  className="shadow  border-2 border-gray-400 py-2 px-6 rounded mt-7 "placeholderText="Check-in" 
+                    <div  className="in">
+                        <DatePicker  className="shadow  border-2  md:ml-8 border-gray-400 py-2 px-6 rounded mt-7 "placeholderText="Check-in" 
                         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}
                         />
 
                     </div>
-                    <div  style={{ width: "20%", marginRight: "40px"}}>
-                        <DatePicker  className="shadow border-2 border-gray-400 py-2 px-6 rounded mt-7" placeholderText="Check-out"
+                    <div  >
+                        <DatePicker  className="shadow border-2  md:ml-8 border-gray-400 py-2 px-6 rounded mt-7" placeholderText="Check-out"
                         selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                         />      
 

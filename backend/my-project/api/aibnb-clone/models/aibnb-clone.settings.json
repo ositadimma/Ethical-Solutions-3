@@ -101,6 +101,11 @@
       "collection": "reviews",
       "via": "aibnb_clones",
       "dominant": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "services.amenities"
     }
   }
 }

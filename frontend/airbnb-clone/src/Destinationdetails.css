@@ -99,6 +99,7 @@
 
 .App .content .date-picker{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -716,6 +717,15 @@ hr{
     .App .content  .related-data{
         margin-left: 40px;
         margin-top: 20px;
+    }
+    .App .content .feedback{
+        background-color: white;
+        box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+        margin-top: 20px;
+        width: 280px;
+        margin-left: 50px;
+        padding: 5px 5px;
+        position: relative;
     }
     
     .App .content .review{
