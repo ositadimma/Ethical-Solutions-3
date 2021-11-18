@@ -271,7 +271,7 @@ export default function Destinationdetails() {
                         <div className="guests">
                             <div className="guest-number">
                                 <h6>GUESTS</h6>
-                                <input type="number"  placeholder="no of guests" value={number1} onChange={e =>setNumber1(+e.target.value)}/>
+                                <input type="number"  placeholder="Number of guests" value={number1} onChange={e =>setNumber1(+e.target.value)}/>
                                 
                             </div>
                             <div className="dropdown">
@@ -280,7 +280,7 @@ export default function Destinationdetails() {
                             </div>
                         </div>
                         <div className="total">
-                            <input type="number"  placeholder=" destination amount" value={number2} onChange={e =>setNumber2(+e.target.value)}/>
+                            <input type="number"  placeholder=" Destination amount" value={number2} onChange={e =>setNumber2(+e.target.value)}/>
                             <div className="get-total">
                             <button onClick={addThemTogether}>Get Total:</button>
                             <h2>${total}</h2>
@@ -469,12 +469,20 @@ export default function Destinationdetails() {
                     </form>
                     <div className="front">
                     { front && front.map(each =>{
-                        const { name, reviews} = each;
+                        const { name, reviews, id} = each;
                         return(
                             <div>
                                 <div className="feedback">
-                                    <h3>{name}</h3>
+                                    <div className="id">
+                                        <h3>{id}</h3>
+                                    </div>
+                                    <div className="content">
                                     <h3>{reviews}</h3>
+                                    <p>by {name}</p>
+
+                                    </div>
+                                    
+                                   
                                 
 
                                 </div>

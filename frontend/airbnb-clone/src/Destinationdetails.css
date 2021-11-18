@@ -643,9 +643,47 @@ hr{
 .App .content .review{
     margin-top: 50px;
 }
+
 .App .content .see-reviews{
     margin-top: 50px;
     margin-left: 70px;
+    display: none;
+}
+
+.App .content .feedback{
+    background-color: white;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 50px;
+    padding: 5px 5px;
+    position: relative;
+}
+
+.App .content .feedback .id{
+    background-color: blue;
+    width: 20px;
+    position: absolute;
+    left: 0;
+
+}
+
+.App .content .feedback .content{
+    margin-top: 30px;
+
+}
+
+.App .content .feedback .content p{
+    color: blue;
+    font-weight: 800;
+
+}
+
+.App .content .feedback .id h3{
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+    
 }
 .App .content .review form button{
     background-image: linear-gradient(to right, turquoise, blue);
@@ -656,9 +694,7 @@ hr{
     font-weight: 700;
     border-radius: 10px;
 }
-.App .content .front{
-    display: none;
-}
+
 .App .content .review h1{
     font-size: 20px;
     font-weight: 800;
@@ -685,6 +721,7 @@ hr{
     .App .content .see-reviews{
         margin-top: 30px;
         margin-left: 120px;
+        display: none;
     }
     .App .content .review form input{
         border: 2px solid gray;
