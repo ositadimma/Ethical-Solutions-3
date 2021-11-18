@@ -15,7 +15,6 @@ function SearchPage() {
     const [destination, setDestination] = useState([])
   const [filtered, setFiltered] = useState([])
   const [searchInput, setSearchInput] = useState("")
-  const [error, setError] = useState(null)
   const[isLoading, setIsLoading] = useState(true)
 
   const fetchDestination = async () => {
