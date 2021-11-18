@@ -397,9 +397,12 @@ hr{
 
 }
 .App .content .middle-section .right .checks .check-in input{
-    margin-right: 70px;
+    position: absolute;
+    left: 8px;
 
 }
+
+
 
 .App .content .middle-section .right .checks .check-out button .add{
     color: gray;

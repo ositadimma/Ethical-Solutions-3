@@ -108,18 +108,8 @@ export default function Destinationdetails() {
                <div className="heading">
                     <h1 className="font-bold text-2xl">{ data.Name}</h1>
                     <div className="bottom-section">
-                        <div className="location"><a href="https://black-history-month-api.hople">{ data.Location}</a></div>
-                        <div className="socials">
-                            <div className="share">
-                                <i class="fas fa-share"></i>
-                                <a href="https://black-history-month-api.herokuapp.com/people">Share</a>
-                            </div>
-                            <div className="save">
-                            <i class="fas fa-heart"></i>
-                            <a href="https://black-history-month-api.herokuapp.com/people">Save</a>
-                            </div>
-
-                        </div>
+                        <div className="location"><a href="https://black-history-month-api.hopless">{ data.Location}</a></div>
+                        
                     </div>
                </div>
                <div className="images">
