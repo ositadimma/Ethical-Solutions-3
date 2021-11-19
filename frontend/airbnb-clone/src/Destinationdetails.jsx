@@ -306,82 +306,88 @@ export default function Destinationdetails() {
                     <hr className="line"></hr>
 
                     <div className="offer">
+                    {data.resources.length > 3 ? (
                         <div className="packages">
-                            <div className="heading">
-                                <h1>What this place offers</h1>
+                        <div className="heading">
+                            <h1>What this place offers</h1>
 
-                            </div>
-                            
-                            <div className="kitchen">
-                             <i class="fas fa-home"></i>
-                             <p>Kitchen</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                             <i class="fas fa-home"></i>
-                             <p>Free parking on premises</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                             <i class="fas fa-home"></i>
-                             <p>TV</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                             <i class="fas fa-home"></i>
-                             <p>Air Conditioning</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                             <i class="fas fa-home"></i>
-                             <p>Washer</p>
-
-                            </div>
                         </div>
-                        {
-                            show?<div className="offer-right">
-
-                            <div className="kitchen">
-                                <i class="fas fa-home"></i>
-                                <p>Wifi</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                                <i class="fas fa-home"></i>
-                                <p>Pool</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                                <i class="fas fa-home"></i>
-                                <p>Elevator</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                                <i class="fas fa-home"></i>
-                                <p>Dryer</p>
-
-                            </div>
-
-                            <div className="kitchen">
-                                <i class="fas fa-home"></i>
-                                <p>Spa</p>
-
-                            </div>
-                            
                         
-                        </div>:null
-                        }
+                        <div className="kitchen">
+                            <i class="fas fa-home"></i>
+                            <p>{data.resources[0].options}</p>
+                            
 
+                        </div>
 
+                        <div className="kitchen">
+                         <i class="fas fa-home"></i>
+                         <p>{data.resources[0].option2}</p>
+                         
+
+                        </div>
+
+                        <div className="kitchen">
+                         <i class="fas fa-home"></i>
+                         <p>{data.resources[1].options}</p>
+
+                        </div>
+
+                        <div className="kitchen">
+                         <i class="fas fa-home"></i>
+                         <p>{data.resources[1].option2}</p>
+
+                        </div>
+
+                        
+                    </div>
+
+                    ) :(<h1>Amenities are not available at this moment...</h1>)}
+                    {data.resources.length > 3 ?(
+                        <div className="offer-right">
+                        {
+                                show?<div>
+    
+                                <div className="kitchen">
+                                    <i class="fas fa-home"></i>
+                                    <p>{data.resources[2].options}</p>
+    
+                                </div>
+    
+                                <div className="kitchen">
+                                    <i class="fas fa-home"></i>
+                                    <p>{data.resources[2].option2}</p>
+    
+                                </div>
+    
+                                <div className="kitchen">
+                                    <i class="fas fa-home"></i>
+                                    <p>{data.resources[3].options}</p>
+    
+                                </div>
+    
+                                <div className="kitchen">
+                                    <i class="fas fa-home"></i>
+                                    <p>{data.resources[3].option2}</p>
+    
+                                </div>
+    
+                                
+                                
+                            
+                            </div>:null
+                            }
+    
+    
+                        </div>
+                    ):(<h1>Amenities are not available at this moment...</h1>)}
+                    
+
+                        
+                        
+                        
                     </div>-
-
+                    
                     <div className="offer-button">
                         
                         <button onClick={()=>setShow(!show)}><p>Show all amenities</p></button>
@@ -409,7 +415,7 @@ export default function Destinationdetails() {
 
                     </div>
                     <div  >
-                        <DatePicker  className="shadow border-2  md:ml-8 border-gray-400 py-2 px-6 rounded mt-7" placeholderText="Check-out"
+                        <DatePicker  className="shadow border-2  md:ml-8  border-gray-400 py-2 px-6 rounded mt-7" placeholderText="Check-out"
                         selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                         />      
 
@@ -439,50 +445,72 @@ export default function Destinationdetails() {
                         
 
                 <div className="related-data">
-                    Related destinations:
-                    <Link >
-                     <h3>{ data.places[0].name}</h3>
-                        
-                    </Link>
+                   
+                    { data.places.length > 0 ? (
+                        <div className="places">
+                        Related destinations:
+                        <Link >
+                         <h3>{ data.places[0].name}</h3>
+                            
+                        </Link>
 
-                    <Link>
-                     <h3>{ data.places[1].name}</h3>
+                        </div>
+                         
                         
-                    </Link>
+
+                    ):(
+                        <h2>No related destinations</h2>
+
+
+                    )}
+
+                        
+                   
+
+                   
                     
                 </div>
                 <div className="review">
-                    <h1>Post a Review</h1>
+                    <h1>How do you feel about Ethical Solutions?</h1>
                     <form onSubmit={(e) => submit(e)} className="flex flex-col">
                         <input  onChange={(e) => handle(e)} value={review.name} type="text" id="name" placeholder="name"/>
                         <textarea onChange={ (e) => handle(e)} value={review.reviews} id="reviews" cols="30" rows="10" placeholder="comment"></textarea>
                         <button>Post review</button>
                     </form>
                     <div className="front">
-                    { front && front.map(each =>{
-                        const { name, reviews, id} = each;
-                        return(
+                    {
+                        front.length > 0 && (
+                            
                             <div>
-                                <div className="feedback">
-                                    <div className="id">
-                                        <h3>{id}</h3>
-                                    </div>
-                                    <div className="content">
-                                    <h3>{reviews}</h3>
-                                    <p>by {name}</p>
-
-                                    </div>
+                                {front.map ((each)=>(
                                     
-                                   
-                                
+                                    
+                                     <div className="feedback">
+                                    
+                                     <div className="id" key={each.id}>
+                                         <h3>{each.id}</h3>
+                                     </div>
+                                     <div className="content">
+                                     <h3>{each.reviews}</h3>
+                                     <p>by {each.name}</p>
+ 
+                                     </div>
+                                     
+                                    
+                                 
+ 
+                                    </div>
 
-                                </div>
+                                ))}
+                                
                                 
                             </div>
                             
 
+                            
                         )
-                     })}
+                    }
+                    
                 </div>
                     <div className="see-reviews"> 
                         < Link to={`/reviews/${id}`} style={{textDecoration:'underline', color:'blue'}}>

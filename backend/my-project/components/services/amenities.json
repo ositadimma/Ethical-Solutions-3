@@ -2,8 +2,16 @@
   "collectionName": "components_services_amenities",
   "info": {
     "name": "amenities",
-    "icon": "genderless"
+    "icon": "genderless",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "options": {
+      "type": "string"
+    },
+    "option2": {
+      "type": "string"
+    }
+  }
 }

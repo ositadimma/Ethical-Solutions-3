@@ -102,9 +102,9 @@
       "via": "aibnb_clones",
       "dominant": true
     },
-    "features": {
+    "resources": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "services.amenities"
     }
   }

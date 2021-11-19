@@ -75,7 +75,7 @@ useEffect(() => {
             
 
         
-        {searchInput.length > 1
+        {searchInput.length > 1 
           ? filtered && filtered.map(({ id,  Name, Description, ratings, Location, Media, medium, pictures, Amount}) => (
             <Link to={`/destination/${id}`}>
                   <div  key={id}>
