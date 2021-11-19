@@ -113,10 +113,16 @@ export default function Destinationdetails() {
                     </div>
                </div>
                <div className="images">
-                   <div className="left">
-                     <img src={`${`http://localhost:1337`}${data.Media.formats.large.url}`} alt="destination-pics"/> 
+                {data.Media.formats.large.url.includes(data.Media.formats.large.url) ? (
+                     <div className="left">
 
+                     <img src={`${`http://localhost:1337`}${data.Media.formats.large.url}`} alt="destination-pics"/> 
                    </div>
+
+                ):(
+                    <h1>Image format not available</h1>
+                )}
+                  
                    <div className="right">
                        <div className="top">
                          <img src={`${`http://localhost:1337`}${data.pictures[0].formats.thumbnail.url}`} alt="destination-pics"/>

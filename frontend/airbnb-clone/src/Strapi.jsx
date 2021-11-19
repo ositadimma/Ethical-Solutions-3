@@ -79,8 +79,10 @@ function Strapi() {
 
           </div>
           
-          
-           <button onClick={notify}>Book Destination</button>
+      
+            <button onClick={notify}>Book Destination</button>
+
+           
 
           
         </form>
