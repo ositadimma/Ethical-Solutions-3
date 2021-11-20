@@ -5,9 +5,7 @@ import {Route, Redirect} from 'react-router-dom';
 
 
 function ProtectedRoutes({component: Component, ...rest}){
-    // axios.get('http://localhost:1337/connect/auth0').then(response => {
-    //     console.log(response);
-    // });
+    
     const { loginWithRedirect, isLoading, user, isAuthenticated } = useAuth0();
 
     return (
